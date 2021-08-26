@@ -1,93 +1,118 @@
-## For the sake of Ease
-Set Work Directory in all terminal session
+## Prerequisites
+* Java installed in host machines when running Kafka in Host machine
+* Docker installed on Host Machine
+* Java installed inside Docker container
+## Getting Started
 ```bash
-export WORK_DIR="/kafka-streaming-example"
+git clone https://github.com/anandshivam44/kafka-streaming-example.git
 ```
-
-## Install Kafak
-
-cd /tmp && wget https://apachemirror.wuchna.com/kafka/2.8.0/kafka_2.13-2.8.0.tgz
-cd $WORK_DIR/kafka_2.13-2.8.0 && tar -xzvf /tmp/kafka_2.13-2.8.0.tgz
-cd kafka_2.13-2.8.0
-
-## Start Services
-TODO: missing chmod +x
-* Start Zookeeper in new terminal
-```
-cd $WORK_DIR/kafka_2.13-2.8.0 && bin/zookeeper-server-start.sh config/zookeeper.properties
-```
-
-* Start Kafka Server in new terminal
-```
-cd $WORK_DIR/kafka_2.13-2.8.0 && bin/kafka-server-start.sh config/server.properties
-```
-
-## Basic Kafka Interactions
-
-* Open new terminal and demo the following.
-* Create a new topic
-
+For the sake of ease set work directory in all terminal session and use absolute paths to avoid errors
 ```bash
-bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+export WORK_DIR=$(pwd)/kafka-streaming-example
 ```
 
-* Get Topic Details
 
-```bash
-bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+##1. Start Services aka Start Apache Kafka in Host Machine
+####1.1 Start Zookeeper in new terminal
+```
+cd $WORK_DIR/kafka_2.13-2.8.0
+
+bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
 
-* Publish events to kafka topic
+####1.2 Start Kafka Server in new terminal
+```
+cd $WORK_DIR/kafka_2.13-2.8.0
+
+bin/kafka-server-start.sh config/server.properties
+```
+
+
+
+
+##2. Run the streaming example:
+#### 2.1 Create the required Topics
+NOTE: First time only, create the required topics.
 
 ```bash
-bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+cd $WORK_DIR/kafka-streams 
+
+./bin/create-topics.sh $WORK_DIR/kafka_2.13-2.8.0 localhost 2181
 ```
+#### 2.2 Json Generator
+* Build the json generator container
+```bash
+cd $WORK_DIR/json-data-generator-1.4.1
 
-Do `Ctrl+C` once you are done sending the events.
-
-* Read from Kafka topic
+docker build -t test-data-generator .
+```
+* Run the JSON data generator docker container
 
 ```bash
-bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+docker run --network="host"  -it test-data-generator
 ```
-
-
-## Run the streaming example:
-TODO: Add git clone 
-TODO: Add proper path with variables
-Source: https://github.com/bbejeck/kafka-streams
-
-* NOTE: First time only, create the required topics.
+###3. Build and Run the streams which processes the orders.  
+    
+#### 3.1 Stream: PurchaseProcessor
+* Build the stream `PurchaseProcessor`
 
 ```bash
-cd $WORK_DIR/kafka-streams && ./bin/create-topics.sh $WORK_DIR/kafka_2.13-2.8.0 localhost 2181
+cd $WORK_DIR/kafka-streams
+
+docker build -t StreamPurchaseProcessor -f  DockerfileRunPurchaseProcessor .
 ```
-* Download the JSON data generator from here
-https://github.com/everwatchsolutions/json-data-generator/releases  
-* Then copy the json config files to json generator conf directory
-```bash
-cp streaming-workflows/* <dir>/json-data-generator-1.2.0/conf
-```
-* Run the JSON data generator which generates purchase orders and publishes it to topic.
+* Run the docker container containing stream `runPurchaseProcessor`
 
 ```bash
-cd $WORK_DIR/json-data-generator-1.4.1 && java -jar json-data-generator-1.4.1.jar purchases-config.json
+docker run --network="host"  -it StreamPurchaseProcessor
 ```
+#### 3.2 Stream: Purchase
+* Build the stream `PurchaseStreams`
+```bash
+cd $WORK_DIR/kafka-streams
 
-* Run the streams which processes the orders.
+docker build -t PurchaseStreams -f  DockerfileRunPurchaseStreams .
+```
+* Run the docker container containing stream `PurchaseStreams`
 
 ```bash
-cd $WORK_DIR/kafka-streams && ./gradlew runPurchaseProcessor
-cd $WORK_DIR/kafka-streams && ./gradlew runPurchaseStreams
+docker run --network="host"  -it StreamPurchaseProcessor
 ```
+##4. Check the output topics
+#### 4.1 Topic: Purchases
+* Build the subscriber `Purchases`
+```bash
+cd $WORK_DIR/kafka-streams
 
-* Check the output topics
-* 
+docker build -t SubscriberPurchases -f  DockerFileOutputTopicPurchases .
+```
+* Run the docker container with Topic: Purchases
 
 ```bash
-cd $WORK_DIR/kafka_2.13-2.8.0 && bin/kafka-console-consumer.sh --topic purchases --bootstrap-server localhost:9092
-
-cd $WORK_DIR/kafka_2.13-2.8.0 && bin/kafka-console-consumer.sh --topic rewards --bootstrap-server localhost:9092
-
-cd $WORK_DIR/kafka_2.13-2.8.0 && bin/kafka-console-consumer.sh --topic patterns --bootstrap-server localhost:9092
+docker run --network="host"  -it StreamPurchaseProcessor
 ```
+#### 4.2 Topic: Rewards
+* Build the subscriber `Rewards`
+```bash
+cd $WORK_DIR/kafka-streams
+
+docker build -t SubscriberRewards -f  DockerFileOutputTopicRewards .
+```
+* Run the docker container with Topic: Rewards
+
+```bash
+docker run --network="host"  -it StreamPurchaseProcessor
+```
+#### 4.3 Topic: Patterns
+* Build the subscriber `Patterns`
+```bash
+cd $WORK_DIR/kafka-streams
+
+docker build -t SubscriberPatterns -f  DockerFileOutputTopicPatterns .
+```
+* Run the docker container containing stream `PurchaseStreams`
+
+```bash
+* Run the docker container with Topic: Patterns
+```
+

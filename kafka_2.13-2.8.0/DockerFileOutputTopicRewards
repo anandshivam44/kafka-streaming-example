@@ -1,0 +1,9 @@
+FROM bitnami/java:1.8.302-debian-10-r32
+
+RUN apt-get update
+WORKDIR /app
+
+
+COPY . /app
+
+CMD [ "bin/kafka-console-consumer.sh", "--topic", "rewards", "--bootstrap-server", "localhost:9092" ]
