@@ -44,12 +44,12 @@ cd $WORK_DIR/kafka-streams
 ```bash
 cd $WORK_DIR/json-data-generator-1.4.1
 
-docker build -t test-data-generator .
+docker build -t json-data-generator .
 ```
 * Run the JSON data generator docker container
 
 ```bash
-docker run --network="host"  -it test-data-generator
+docker run --network="host"  -it json-data-generator
 ```
 ### 3. Build and Run the streams which processes the orders.  
     
@@ -59,24 +59,24 @@ docker run --network="host"  -it test-data-generator
 ```bash
 cd $WORK_DIR/kafka-streams
 
-docker build -t StreamPurchaseProcessor -f  DockerfileRunPurchaseProcessor .
+docker build -t stream-purchase-processor -f  DockerfileRunPurchaseProcessor .
 ```
 * Run the docker container containing stream `runPurchaseProcessor`
 
 ```bash
-docker run --network="host"  -it StreamPurchaseProcessor
+docker run --network="host"  -it stream-purchase-processor
 ```
 #### 3.2 Stream: Purchase
 * Build the stream `PurchaseStreams`
 ```bash
 cd $WORK_DIR/kafka-streams
 
-docker build -t PurchaseStreams -f  DockerfileRunPurchaseStreams .
+docker build -t purchase-streams -f  DockerfileRunPurchaseStreams .
 ```
 * Run the docker container containing stream `PurchaseStreams`
 
 ```bash
-docker run --network="host"  -it StreamPurchaseProcessor
+docker run --network="host"  -it purchase-streams
 ```
 ## 4. Check the output topics
 #### 4.1 Topic: Purchases
@@ -84,35 +84,35 @@ docker run --network="host"  -it StreamPurchaseProcessor
 ```bash
 cd $WORK_DIR/kafka-streams
 
-docker build -t SubscriberPurchases -f  DockerFileOutputTopicPurchases .
+docker build -t subscriber-purchases -f  DockerFileOutputTopicPurchases .
 ```
 * Run the docker container with Topic: Purchases
 
 ```bash
-docker run --network="host"  -it StreamPurchaseProcessor
+docker run --network="host"  -it subscriber-purchases
 ```
 #### 4.2 Topic: Rewards
 * Build the subscriber `Rewards`
 ```bash
 cd $WORK_DIR/kafka-streams
 
-docker build -t SubscriberRewards -f  DockerFileOutputTopicRewards .
+docker build -t subscriber-rewards -f  DockerFileOutputTopicRewards .
 ```
 * Run the docker container with Topic: Rewards
 
 ```bash
-docker run --network="host"  -it StreamPurchaseProcessor
+docker run --network="host"  -it subscriber-rewards
 ```
 #### 4.3 Topic: Patterns
 * Build the subscriber `Patterns`
 ```bash
 cd $WORK_DIR/kafka-streams
 
-docker build -t SubscriberPatterns -f  DockerFileOutputTopicPatterns .
+docker build -t subscriber-patterns -f  DockerFileOutputTopicPatterns .
 ```
 * Run the docker container containing stream `PurchaseStreams`
 
 ```bash
-* Run the docker container with Topic: Patterns
+docker run --network="host"  -it subscriber-patterns
 ```
 
