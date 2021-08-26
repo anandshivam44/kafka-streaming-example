@@ -1,0 +1,118 @@
+2021-08-26 15:38:16,035 INFO n.a.d.j.g.JsonDataGenerator [main] Overriding Simulation Config file from command line to use [ purchases-config.json ]
+2021-08-26 15:38:16,036 DEBUG n.a.d.j.g.JsonDataGenerator [main] Creating Simulation Runner using Simulation Config [ purchases-config.json ]
+2021-08-26 15:38:16,185 INFO n.a.d.j.g.JsonDataGenerator [main] Adding Kafka Producer with properties: {type=kafka, broker.server=127.0.0.1, broker.port=9092, topic=src-topic, flatten=false, sync=false}
+2021-08-26 15:38:16,240 INFO n.a.d.j.g.JsonDataGenerator [main] Adding Log4JLogger Producer
+2021-08-26 15:38:16,259 INFO n.a.d.j.g.SimulationRunner [main] Adding EventGenerator for [ purchases,purchases.json ]
+2021-08-26 15:38:16,260 INFO n.a.d.j.g.SimulationRunner [main] Starting Simulation
+2021-08-26 15:38:16,324 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ counter,net.acesinc.data.json.generator.types.CounterType ]
+2021-08-26 15:38:16,324 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ boolean,net.acesinc.data.json.generator.types.BooleanType ]
+2021-08-26 15:38:16,325 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ now,net.acesinc.data.json.generator.types.NowType ]
+2021-08-26 15:38:16,325 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ integer,net.acesinc.data.json.generator.types.IntegerType ]
+2021-08-26 15:38:16,325 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ alpha,net.acesinc.data.json.generator.types.AlphaType ]
+2021-08-26 15:38:16,325 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ lastName,net.acesinc.data.json.generator.types.LastName ]
+2021-08-26 15:38:16,326 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ stringMerge,net.acesinc.data.json.generator.types.StringMergeType ]
+2021-08-26 15:38:16,326 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ randomIncrementLong,net.acesinc.data.json.generator.types.RandomIncrementLongType ]
+2021-08-26 15:38:16,326 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ nowTimestamp,net.acesinc.data.json.generator.types.NowTimestampType ]
+2021-08-26 15:38:16,326 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ long,net.acesinc.data.json.generator.types.LongType ]
+2021-08-26 15:38:16,326 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ double,net.acesinc.data.json.generator.types.DoubleType ]
+2021-08-26 15:38:16,326 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ firstName,net.acesinc.data.json.generator.types.FirstName ]
+2021-08-26 15:38:16,327 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ date,net.acesinc.data.json.generator.types.DateType ]
+2021-08-26 15:38:16,327 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ random,net.acesinc.data.json.generator.types.RandomType ]
+2021-08-26 15:38:16,327 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ timestamp,net.acesinc.data.json.generator.types.TimestampType ]
+2021-08-26 15:38:16,327 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ uuid,net.acesinc.data.json.generator.types.UuidType ]
+2021-08-26 15:38:16,328 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ alphaNumeric,net.acesinc.data.json.generator.types.AlphaNumericType ]
+2021-08-26 15:38:16,337 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Doe","firstName":"Sarah","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"batteries","quantity":4,"price":5.2091,"purchaseDate":"2016-02-16T04:25:35.000Z","zipCode":"20841"} ]
+2021-08-26 15:38:17,834 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Baggins","firstName":"Eric","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"shaving cream","quantity":3,"price":10.3603,"purchaseDate":"2016-02-13T11:11:18.000Z","zipCode":"20841"} ]
+2021-08-26 15:38:18,231 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 2.0 events/sec
+2021-08-26 15:38:19,079 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Loxly","firstName":"Andrew","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"doughnuts","quantity":4,"price":5.775,"purchaseDate":"2016-02-12T07:07:43.000Z","zipCode":"20841"} ]
+2021-08-26 15:38:19,292 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:20,602 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Tara","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"eggs","quantity":3,"price":12.8174,"purchaseDate":"2016-02-18T10:34:19.000Z","zipCode":"10005"} ]
+2021-08-26 15:38:20,916 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:21,904 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Smith","firstName":"Tara","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"shampoo","quantity":2,"price":12.572,"purchaseDate":"2016-02-13T01:22:24.000Z","zipCode":"19971"} ]
+2021-08-26 15:38:22,255 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:23,643 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Doe","firstName":"Steve","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"beer","quantity":1,"price":13.7166,"purchaseDate":"2016-02-13T11:54:43.000Z","zipCode":"20841"} ]
+2021-08-26 15:38:23,968 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:24,954 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Bob","creditCardNumber":"5293-8502-0071-3058","itemPurchased":"eggs","quantity":2,"price":5.6011,"purchaseDate":"2016-02-15T22:20:37.000Z","zipCode":"20852"} ]
+2021-08-26 15:38:25,252 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:26,505 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Doe","firstName":"Eric","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"eggs","quantity":2,"price":8.974,"purchaseDate":"2016-02-14T23:49:30.000Z","zipCode":"21842"} ]
+2021-08-26 15:38:26,790 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:28,248 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Baggins","firstName":"Eric","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"batteries","quantity":2,"price":11.419,"purchaseDate":"2016-02-18T00:43:46.000Z","zipCode":"10005"} ]
+2021-08-26 15:38:28,478 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:29,817 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Tara","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"diapers","quantity":2,"price":11.7254,"purchaseDate":"2016-02-19T06:05:19.000Z","zipCode":"20852"} ]
+2021-08-26 15:38:30,153 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:31,129 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Andrew","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"diapers","quantity":4,"price":11.0396,"purchaseDate":"2016-02-19T20:22:01.000Z","zipCode":"20852"} ]
+2021-08-26 15:38:31,517 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:32,338 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Doe","firstName":"Bob","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"shaving cream","quantity":2,"price":13.48,"purchaseDate":"2016-02-14T19:17:48.000Z","zipCode":"20852"} ]
+2021-08-26 15:38:32,708 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:33,999 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Tara","creditCardNumber":"5293-8502-0071-3058","itemPurchased":"shaving cream","quantity":3,"price":4.4177,"purchaseDate":"2016-02-19T01:33:52.000Z","zipCode":"21842"} ]
+2021-08-26 15:38:34,377 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:35,735 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Black","firstName":"Andrew","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"doughnuts","quantity":2,"price":6.9986,"purchaseDate":"2016-02-17T15:12:39.000Z","zipCode":"10005"} ]
+2021-08-26 15:38:36,122 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:37,578 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Baggins","firstName":"Eric","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"diapers","quantity":1,"price":4.983,"purchaseDate":"2016-02-13T13:46:20.000Z","zipCode":"20841"} ]
+2021-08-26 15:38:37,916 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:38,696 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Loxly","firstName":"Steve","creditCardNumber":"5370-4638-8881-3020","itemPurchased":"doughnuts","quantity":4,"price":3.9802,"purchaseDate":"2016-02-16T02:33:58.000Z","zipCode":"10005"} ]
+2021-08-26 15:38:39,075 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:40,398 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Loxly","firstName":"Sarah","creditCardNumber":"5370-4638-8881-3020","itemPurchased":"shampoo","quantity":1,"price":4.4078,"purchaseDate":"2016-02-14T01:48:10.000Z","zipCode":"10005"} ]
+2021-08-26 15:38:40,745 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:41,635 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Smith","firstName":"Steve","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"diapers","quantity":4,"price":9.4972,"purchaseDate":"2016-02-13T18:28:46.000Z","zipCode":"20852"} ]
+2021-08-26 15:38:42,031 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec
+2021-08-26 15:38:42,845 INFO n.a.d.j.g.JsonDataGenerator [Thread-1] Shutdown Hook Invoked.  Shutting Down Loggers
+2021-08-26 15:38:42,846 INFO n.a.d.j.g.SimulationRunner [Thread-1] Stopping Simulation
+2021-08-26 15:43:06,425 INFO n.a.d.j.g.JsonDataGenerator [main] Overriding Simulation Config file from command line to use [ purchases-config.json ]
+2021-08-26 15:43:06,427 DEBUG n.a.d.j.g.JsonDataGenerator [main] Creating Simulation Runner using Simulation Config [ purchases-config.json ]
+2021-08-26 15:43:06,582 INFO n.a.d.j.g.JsonDataGenerator [main] Adding Kafka Producer with properties: {type=kafka, broker.server=127.0.0.1, broker.port=9092, topic=src-topic, flatten=false, sync=false}
+2021-08-26 15:43:06,636 INFO n.a.d.j.g.JsonDataGenerator [main] Adding Log4JLogger Producer
+2021-08-26 15:43:06,655 INFO n.a.d.j.g.SimulationRunner [main] Adding EventGenerator for [ purchases,purchases.json ]
+2021-08-26 15:43:06,655 INFO n.a.d.j.g.SimulationRunner [main] Starting Simulation
+2021-08-26 15:43:06,719 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ stringMerge,net.acesinc.data.json.generator.types.StringMergeType ]
+2021-08-26 15:43:06,719 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ counter,net.acesinc.data.json.generator.types.CounterType ]
+2021-08-26 15:43:06,719 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ alpha,net.acesinc.data.json.generator.types.AlphaType ]
+2021-08-26 15:43:06,720 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ boolean,net.acesinc.data.json.generator.types.BooleanType ]
+2021-08-26 15:43:06,720 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ integer,net.acesinc.data.json.generator.types.IntegerType ]
+2021-08-26 15:43:06,720 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ randomIncrementLong,net.acesinc.data.json.generator.types.RandomIncrementLongType ]
+2021-08-26 15:43:06,720 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ uuid,net.acesinc.data.json.generator.types.UuidType ]
+2021-08-26 15:43:06,720 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ alphaNumeric,net.acesinc.data.json.generator.types.AlphaNumericType ]
+2021-08-26 15:43:06,720 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ lastName,net.acesinc.data.json.generator.types.LastName ]
+2021-08-26 15:43:06,721 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ random,net.acesinc.data.json.generator.types.RandomType ]
+2021-08-26 15:43:06,721 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ nowTimestamp,net.acesinc.data.json.generator.types.NowTimestampType ]
+2021-08-26 15:43:06,721 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ long,net.acesinc.data.json.generator.types.LongType ]
+2021-08-26 15:43:06,721 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ firstName,net.acesinc.data.json.generator.types.FirstName ]
+2021-08-26 15:43:06,722 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ timestamp,net.acesinc.data.json.generator.types.TimestampType ]
+2021-08-26 15:43:06,722 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ double,net.acesinc.data.json.generator.types.DoubleType ]
+2021-08-26 15:43:06,722 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ now,net.acesinc.data.json.generator.types.NowType ]
+2021-08-26 15:43:06,722 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ date,net.acesinc.data.json.generator.types.DateType ]
+2021-08-26 15:43:06,732 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Tara","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"beer","quantity":2,"price":11.2289,"purchaseDate":"2016-02-14T15:08:15.000Z","zipCode":"19971"} ]
+2021-08-26 15:43:08,027 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Grange","firstName":"Sarah","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"beer","quantity":1,"price":8.5828,"purchaseDate":"2016-02-14T17:28:00.000Z","zipCode":"21842"} ]
+2021-08-26 15:43:08,228 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 2.0 events/sec
+2021-08-26 15:43:09,037 INFO n.a.d.j.g.JsonDataGenerator [Thread-1] Shutdown Hook Invoked.  Shutting Down Loggers
+2021-08-26 15:43:09,037 INFO n.a.d.j.g.SimulationRunner [Thread-1] Stopping Simulation
+2021-08-26 15:49:16,698 INFO n.a.d.j.g.JsonDataGenerator [main] Overriding Simulation Config file from command line to use [ purchases-config.json ]
+2021-08-26 15:49:16,699 DEBUG n.a.d.j.g.JsonDataGenerator [main] Creating Simulation Runner using Simulation Config [ purchases-config.json ]
+2021-08-26 15:49:16,859 INFO n.a.d.j.g.JsonDataGenerator [main] Adding Kafka Producer with properties: {type=kafka, broker.server=127.0.0.1, broker.port=9092, topic=src-topic, flatten=false, sync=false}
+2021-08-26 15:49:16,920 INFO n.a.d.j.g.JsonDataGenerator [main] Adding Log4JLogger Producer
+2021-08-26 15:49:16,933 INFO n.a.d.j.g.SimulationRunner [main] Adding EventGenerator for [ purchases,purchases.json ]
+2021-08-26 15:49:16,933 INFO n.a.d.j.g.SimulationRunner [main] Starting Simulation
+2021-08-26 15:49:17,014 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ boolean,net.acesinc.data.json.generator.types.BooleanType ]
+2021-08-26 15:49:17,014 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ alpha,net.acesinc.data.json.generator.types.AlphaType ]
+2021-08-26 15:49:17,015 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ counter,net.acesinc.data.json.generator.types.CounterType ]
+2021-08-26 15:49:17,015 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ uuid,net.acesinc.data.json.generator.types.UuidType ]
+2021-08-26 15:49:17,015 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ alphaNumeric,net.acesinc.data.json.generator.types.AlphaNumericType ]
+2021-08-26 15:49:17,015 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ date,net.acesinc.data.json.generator.types.DateType ]
+2021-08-26 15:49:17,016 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ timestamp,net.acesinc.data.json.generator.types.TimestampType ]
+2021-08-26 15:49:17,016 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ nowTimestamp,net.acesinc.data.json.generator.types.NowTimestampType ]
+2021-08-26 15:49:17,016 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ stringMerge,net.acesinc.data.json.generator.types.StringMergeType ]
+2021-08-26 15:49:17,016 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ integer,net.acesinc.data.json.generator.types.IntegerType ]
+2021-08-26 15:49:17,016 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ long,net.acesinc.data.json.generator.types.LongType ]
+2021-08-26 15:49:17,017 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ lastName,net.acesinc.data.json.generator.types.LastName ]
+2021-08-26 15:49:17,017 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ now,net.acesinc.data.json.generator.types.NowType ]
+2021-08-26 15:49:17,017 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ double,net.acesinc.data.json.generator.types.DoubleType ]
+2021-08-26 15:49:17,017 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ firstName,net.acesinc.data.json.generator.types.FirstName ]
+2021-08-26 15:49:17,017 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ random,net.acesinc.data.json.generator.types.RandomType ]
+2021-08-26 15:49:17,018 DEBUG n.a.d.j.g.t.TypeHandlerFactory [Thread-0] Discovered TypeHandler [ randomIncrementLong,net.acesinc.data.json.generator.types.RandomIncrementLongType ]
+2021-08-26 15:49:17,027 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Smith","firstName":"Steve","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"eggs","quantity":3,"price":5.7308,"purchaseDate":"2016-02-18T23:20:52.000Z","zipCode":"20841"} ]
+2021-08-26 15:49:18,389 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Black","firstName":"Sarah","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"shaving cream","quantity":4,"price":13.3574,"purchaseDate":"2016-02-13T20:07:47.000Z","zipCode":"21842"} ]
+2021-08-26 15:49:18,724 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 2.0 events/sec
+2021-08-26 15:49:20,036 DEBUG n.a.d.j.g.l.KafkaLogger [Thread-0] Sending event to Kafka: [ {"lastName":"Smith","firstName":"Steve","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"diapers","quantity":3,"price":9.3411,"purchaseDate":"2016-02-17T15:10:04.000Z","zipCode":"19971"} ]
+2021-08-26 15:49:20,121 INFO n.a.d.j.g.JsonDataGenerator [Thread-1] Shutdown Hook Invoked.  Shutting Down Loggers
+2021-08-26 15:49:20,123 INFO n.a.d.j.g.SimulationRunner [Thread-1] Stopping Simulation
+2021-08-26 15:49:20,126 TRACE n.a.d.j.g.EventGenerator [Thread-0] Generator( purchases ) generated 1.0 events/sec

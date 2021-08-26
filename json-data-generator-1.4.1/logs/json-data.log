@@ -1,0 +1,23 @@
+{"lastName":"Doe","firstName":"Sarah","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"batteries","quantity":4,"price":5.2091,"purchaseDate":"2016-02-16T04:25:35.000Z","zipCode":"20841"}
+{"lastName":"Baggins","firstName":"Eric","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"shaving cream","quantity":3,"price":10.3603,"purchaseDate":"2016-02-13T11:11:18.000Z","zipCode":"20841"}
+{"lastName":"Loxly","firstName":"Andrew","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"doughnuts","quantity":4,"price":5.775,"purchaseDate":"2016-02-12T07:07:43.000Z","zipCode":"20841"}
+{"lastName":"Grange","firstName":"Tara","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"eggs","quantity":3,"price":12.8174,"purchaseDate":"2016-02-18T10:34:19.000Z","zipCode":"10005"}
+{"lastName":"Smith","firstName":"Tara","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"shampoo","quantity":2,"price":12.572,"purchaseDate":"2016-02-13T01:22:24.000Z","zipCode":"19971"}
+{"lastName":"Doe","firstName":"Steve","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"beer","quantity":1,"price":13.7166,"purchaseDate":"2016-02-13T11:54:43.000Z","zipCode":"20841"}
+{"lastName":"Grange","firstName":"Bob","creditCardNumber":"5293-8502-0071-3058","itemPurchased":"eggs","quantity":2,"price":5.6011,"purchaseDate":"2016-02-15T22:20:37.000Z","zipCode":"20852"}
+{"lastName":"Doe","firstName":"Eric","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"eggs","quantity":2,"price":8.974,"purchaseDate":"2016-02-14T23:49:30.000Z","zipCode":"21842"}
+{"lastName":"Baggins","firstName":"Eric","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"batteries","quantity":2,"price":11.419,"purchaseDate":"2016-02-18T00:43:46.000Z","zipCode":"10005"}
+{"lastName":"Grange","firstName":"Tara","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"diapers","quantity":2,"price":11.7254,"purchaseDate":"2016-02-19T06:05:19.000Z","zipCode":"20852"}
+{"lastName":"Grange","firstName":"Andrew","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"diapers","quantity":4,"price":11.0396,"purchaseDate":"2016-02-19T20:22:01.000Z","zipCode":"20852"}
+{"lastName":"Doe","firstName":"Bob","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"shaving cream","quantity":2,"price":13.48,"purchaseDate":"2016-02-14T19:17:48.000Z","zipCode":"20852"}
+{"lastName":"Grange","firstName":"Tara","creditCardNumber":"5293-8502-0071-3058","itemPurchased":"shaving cream","quantity":3,"price":4.4177,"purchaseDate":"2016-02-19T01:33:52.000Z","zipCode":"21842"}
+{"lastName":"Black","firstName":"Andrew","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"doughnuts","quantity":2,"price":6.9986,"purchaseDate":"2016-02-17T15:12:39.000Z","zipCode":"10005"}
+{"lastName":"Baggins","firstName":"Eric","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"diapers","quantity":1,"price":4.983,"purchaseDate":"2016-02-13T13:46:20.000Z","zipCode":"20841"}
+{"lastName":"Loxly","firstName":"Steve","creditCardNumber":"5370-4638-8881-3020","itemPurchased":"doughnuts","quantity":4,"price":3.9802,"purchaseDate":"2016-02-16T02:33:58.000Z","zipCode":"10005"}
+{"lastName":"Loxly","firstName":"Sarah","creditCardNumber":"5370-4638-8881-3020","itemPurchased":"shampoo","quantity":1,"price":4.4078,"purchaseDate":"2016-02-14T01:48:10.000Z","zipCode":"10005"}
+{"lastName":"Smith","firstName":"Steve","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"diapers","quantity":4,"price":9.4972,"purchaseDate":"2016-02-13T18:28:46.000Z","zipCode":"20852"}
+{"lastName":"Grange","firstName":"Tara","creditCardNumber":"4916-4034-9269-8783","itemPurchased":"beer","quantity":2,"price":11.2289,"purchaseDate":"2016-02-14T15:08:15.000Z","zipCode":"19971"}
+{"lastName":"Grange","firstName":"Sarah","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"beer","quantity":1,"price":8.5828,"purchaseDate":"2016-02-14T17:28:00.000Z","zipCode":"21842"}
+{"lastName":"Smith","firstName":"Steve","creditCardNumber":"5299-1561-5689-1938","itemPurchased":"eggs","quantity":3,"price":5.7308,"purchaseDate":"2016-02-18T23:20:52.000Z","zipCode":"20841"}
+{"lastName":"Black","firstName":"Sarah","creditCardNumber":"4916-4811-5814-8111","itemPurchased":"shaving cream","quantity":4,"price":13.3574,"purchaseDate":"2016-02-13T20:07:47.000Z","zipCode":"21842"}
+{"lastName":"Smith","firstName":"Steve","creditCardNumber":"4929-3813-3266-4295","itemPurchased":"diapers","quantity":3,"price":9.3411,"purchaseDate":"2016-02-17T15:10:04.000Z","zipCode":"19971"}
