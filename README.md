@@ -12,15 +12,15 @@ export WORK_DIR=$(pwd)/kafka-streaming-example
 ```
 
 
-##1. Start Services aka Start Apache Kafka in Host Machine
-####1.1 Start Zookeeper in new terminal
+## 1. Start Services aka Start Apache Kafka in Host Machine
+#### 1.1 Start Zookeeper in new terminal
 ```
 cd $WORK_DIR/kafka_2.13-2.8.0
 
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
 
-####1.2 Start Kafka Server in new terminal
+#### 1.2 Start Kafka Server in new terminal
 ```
 cd $WORK_DIR/kafka_2.13-2.8.0
 
@@ -30,7 +30,7 @@ bin/kafka-server-start.sh config/server.properties
 
 
 
-##2. Run the streaming example:
+## 2. Run the streaming example:
 #### 2.1 Create the required Topics
 NOTE: First time only, create the required topics.
 
@@ -51,7 +51,7 @@ docker build -t test-data-generator .
 ```bash
 docker run --network="host"  -it test-data-generator
 ```
-###3. Build and Run the streams which processes the orders.  
+### 3. Build and Run the streams which processes the orders.  
     
 #### 3.1 Stream: PurchaseProcessor
 * Build the stream `PurchaseProcessor`
@@ -78,7 +78,7 @@ docker build -t PurchaseStreams -f  DockerfileRunPurchaseStreams .
 ```bash
 docker run --network="host"  -it StreamPurchaseProcessor
 ```
-##4. Check the output topics
+## 4. Check the output topics
 #### 4.1 Topic: Purchases
 * Build the subscriber `Purchases`
 ```bash
