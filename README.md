@@ -59,7 +59,7 @@ docker run --network="host"  -it json-data-generator
 ```bash
 cd $WORK_DIR/kafka-streams
 
-docker build -t stream-purchase-processor -f  DockerfileRunPurchaseProcessor .
+docker build -t stream-purchase-processor -f DockerfileRunPurchaseProcessor .
 ```
 * Run the docker container containing stream `runPurchaseProcessor`
 
@@ -82,7 +82,7 @@ docker run --network="host"  -it purchase-streams
 #### 4.1 Topic: Purchases
 * Build the subscriber `Purchases`
 ```bash
-cd $WORK_DIR/kafka-streams
+cd $WORK_DIR/kafka_2.13-2.8.0 
 
 docker build -t subscriber-purchases -f  DockerFileOutputTopicPurchases .
 ```
@@ -94,7 +94,7 @@ docker run --network="host"  -it subscriber-purchases
 #### 4.2 Topic: Rewards
 * Build the subscriber `Rewards`
 ```bash
-cd $WORK_DIR/kafka-streams
+cd $WORK_DIR/kafka_2.13-2.8.0 
 
 docker build -t subscriber-rewards -f  DockerFileOutputTopicRewards .
 ```
@@ -106,7 +106,7 @@ docker run --network="host"  -it subscriber-rewards
 #### 4.3 Topic: Patterns
 * Build the subscriber `Patterns`
 ```bash
-cd $WORK_DIR/kafka-streams
+cd $WORK_DIR/kafka_2.13-2.8.0 
 
 docker build -t subscriber-patterns -f  DockerFileOutputTopicPatterns .
 ```
